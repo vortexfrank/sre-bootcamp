@@ -1,4 +1,4 @@
-import { protectFunction } from '../services/protected';
+import { protectFunction } from '../services/protected.js';
 
 export const protect = (req, res, next) => {
   let authorization = req.headers.authorization;

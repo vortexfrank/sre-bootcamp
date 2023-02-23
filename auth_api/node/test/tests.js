@@ -1,13 +1,13 @@
 import chai from 'chai';
-import { loginFunction } from '../services/login'
-import { protectFunction } from '../services/protected'
+import { loginFunction } from '../services/login.js'
+import { protectFunction } from '../services/protected.js'
 
 const expect = chai.expect;
 
 describe('loginFunction()', function () {
-  it('Test login', function () {
+  it('Test login', async function () {
 
-    expect("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4ifQ.StuYX978pQGnCeeaj2E1yBYwQvZIodyDTCJWXdsxBGI").to.be.equal(loginFunction("admin", "secret"));
+    expect("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4ifQ.StuYX978pQGnCeeaj2E1yBYwQvZIodyDTCJWXdsxBGI").to.be.equal(await loginFunction("admin", "secret"));
   });
 });
 
